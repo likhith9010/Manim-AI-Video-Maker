@@ -1,10 +1,14 @@
 const { Storage } = require('@google-cloud/storage');
 const path = require('path');
 
-// Initialize Google Cloud Storage with service account key
+// Initialize Google Cloud Storage
+// In Cloud Run, the secret is mounted as a file at /app/.gcp/service-account-key.json
+// Locally, uses the keyFilename from .gcp folder
+const keyPath = path.join(__dirname, '.gcp', 'service-account-key.json');
+
 const storage = new Storage({
-  keyFilename: path.join(__dirname, '.gcp', 'service-account-key.json'),
-  projectId: 'manimvideomaker'
+  keyFilename: keyPath,
+  projectId: 'gen-lang-client-0281755331'
 });
 
 const bucketName = process.env.GCS_BUCKET || 'manim_ai_videomaker_backend';
