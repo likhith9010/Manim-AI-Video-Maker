@@ -1,0 +1,11 @@
+node_modules
+npm-debug.log
+media/audio/*
+media/videos/*
+media/codes/*
+.env
+.gcp/*.json
+*.log
+.git
+.gitignore
+README.md
