@@ -23,8 +23,8 @@ const corsOptions = {
   origin: [
     'http://localhost:5173',
     'http://localhost:3000',
-    // Add your Vercel domain after deployment:
-    // 'https://your-app-name.vercel.app'
+    'https://manimaivideomaker.vercel.app',
+    'https://manimaivideomaker-5w1zl2gz0-likhith9010s-projects.vercel.app'
   ],
   credentials: true,
   optionsSuccessStatus: 200
